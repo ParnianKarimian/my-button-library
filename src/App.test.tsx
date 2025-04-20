@@ -1,9 +1,9 @@
-import React from 'react';
+// src/App.test.tsx
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders the Button with correct text', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const button = screen.getByText('Click Me');
+  expect(button).toBeInTheDocument();
 });
