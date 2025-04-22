@@ -4,11 +4,14 @@ import '../assets/Button.css'
 type ButtonProps = {
   label: string;
   onClick?: () => void;
+  variant?: 'primary' | 'secondary' | 'danger';
+  size?: 'small' | 'medium' | 'large';
 };
 
-const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ label, onClick,variant='primary', size='large' }) => {
+  const className = `my-button ${variant} ${size}`;
   return (
-    <button className="my-button" onClick={onClick}>
+    <button className={className} onClick={onClick}>
       {label}
     </button>
   );

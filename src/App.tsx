@@ -1,10 +1,11 @@
 import React from 'react';
 import Button from './components/Button';
 
-const App: React.FC = () => {
+function App() {
   return (
     <div>
-      <Button variant="primary" size="large">Click Me</Button>
+      <h2>Main</h2>
+      <Button label='click' onClick={() => alert('clicked from inside')} />
     </div>
   );
 };
