@@ -1,16 +1,15 @@
-// src/components/Button.tsx
 import React from 'react';
+import '../assets/Button.css'
 
-interface ButtonProps {
-  variant?: 'primary' | 'secondary';
-  size?: 'small' | 'medium' | 'large';
-  children: React.ReactNode;
-}
+type ButtonProps = {
+  label: string;
+  onClick?: () => void;
+};
 
-const Button: React.FC<ButtonProps> = ({ variant = 'primary', size = 'large', children }) => {
+const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
   return (
-    <button className={`${variant} ${size}`}>
-      {children}
+    <button className="my-button" onClick={onClick}>
+      {label}
     </button>
   );
 };
